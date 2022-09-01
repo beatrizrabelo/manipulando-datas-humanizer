@@ -8,13 +8,13 @@ namespace ManipulandoDatasHumanizer
 {
     class CalculoDaDiferençaData
     {
-        public CalculoDaDiferençaData(int ano, int mes, int dia)
+        public CalculoDaDiferençaData(int anoX, int mesX, int diaX)
         {
-            string dataString = Convert.ToString(ano) + "-" + Convert.ToString(mes) + "-" + Convert.ToString(dia);
+            string dataStringX = Convert.ToString(anoX) + "-" + Convert.ToString(mesX) + "-" + Convert.ToString(diaX);
 
-            DateTime dataDateX = DateTime.Parse(dataString);
+            DateTime dataDateX = DateTime.Parse(dataStringX);
 
-            string mensagem = "data: " + dataString;
+            string mensagem = "data: " + dataStringX;
 
             Console.WriteLine(mensagem);
         }
