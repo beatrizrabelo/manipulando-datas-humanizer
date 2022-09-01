@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Humanizer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,9 @@ namespace ManipulandoDatasHumanizer
 
             DateTime dataDateX = DateTime.Parse(dataStringX);
 
-            string mensagem = "data: " + dataStringX;
+            TimeSpan diferenca = DateTime.Now - dataDateX;
+
+            string mensagem = "Diferenca: " + TimeSpanHumanizeExtensions.Humanize(diferenca);
 
             Console.WriteLine(mensagem);
         }
