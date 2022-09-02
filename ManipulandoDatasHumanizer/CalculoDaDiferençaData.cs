@@ -9,32 +9,33 @@ namespace ManipulandoDatasHumanizer
 {
     class CalculoDaDiferençaData
     {
-        public CalculoDaDiferençaData(int anoX, int mesX, int diaX)
+        private DateTime _dataDate;
+
+        public CalculoDaDiferençaData(int ano, int mes, int dia)
         {
-            string dataStringX = Convert.ToString(anoX) + "-" + Convert.ToString(mesX) + "-" + Convert.ToString(diaX);
 
-            DateTime dataDateX = DateTime.Parse(dataStringX);
+            ConversorData(ano, mes, dia);
 
-            TimeSpan diferenca = DateTime.Now - dataDateX;
+            TimeSpan diferenca = DateTime.Now - _dataDate;
 
-            string mensagem = "Diferenca: " + TimeSpanHumanizeExtensions.Humanize(diferenca);
+            string mensagem = "Aproximadamente: " + TimeSpanHumanizeExtensions.Humanize(diferenca);
 
             Console.WriteLine(mensagem);
         }
 
-        public CalculoDaDiferençaData(int anoX, int mesX, int diaX, int anoY, int mesY, int diaY)
+        public DateTime ConversorData(int ano, int mes, int dia)
         {
-            string dataStringX = Convert.ToString(anoX) + "-" + Convert.ToString(mesX) + "-" + Convert.ToString(diaX);
-            string dataStringY = Convert.ToString(anoY) + "-" + Convert.ToString(mesY) + "-" + Convert.ToString(diaY);
+            string dataString = 
+                  Convert.ToString(ano) + "-" 
+                + Convert.ToString(mes) + "-" 
+                + Convert.ToString(dia);
 
-            DateTime dataDateX = DateTime.Parse(dataStringX);
-            DateTime dataDateY = DateTime.Parse(dataStringY);
+            DateTime dataDate = DateTime.Parse(dataString);
 
-            TimeSpan diferenca = dataDateX - dataDateY;
+            _dataDate = dataDate;
 
-            string mensagem = "Diferenca: " + TimeSpanHumanizeExtensions.Humanize(diferenca);
-
-            Console.WriteLine(mensagem);
+            return dataDate;
         }
+
     }
 }
