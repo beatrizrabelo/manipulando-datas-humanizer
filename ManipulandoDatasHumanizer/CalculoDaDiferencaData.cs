@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ManipulandoDatasHumanizer
 {
-    class CalculoDaDiferençaData
+    class CalculoDaDiferencaData
     {
         private DateTime _dataDate;
 
-        public CalculoDaDiferençaData(int ano, int mes, int dia)
+        public CalculoDaDiferencaData(int ano, int mes, int dia)
         {
 
             ConversorData(ano, mes, dia);

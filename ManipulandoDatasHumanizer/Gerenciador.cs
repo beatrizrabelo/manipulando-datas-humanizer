@@ -10,7 +10,7 @@ namespace ManipulandoDatasHumanizer
     {
         public static void Main(string[] args)
         {
-            CalculoDaDiferençaData calculoDiferenca = new CalculoDaDiferençaData(2022, 9, 15);
+            CalculoDaDiferencaData calculoDiferenca = new CalculoDaDiferencaData(2022, 9, 15);
         }
     }
 }
